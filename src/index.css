@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-50: #e6f5ff;
+  --primary-100: #cceaff;
+  --primary-200: #99d5ff;
+  --primary-300: #66c0ff;
+  --primary-400: #33aaff;
+  --primary-500: #0095ff;
+  --primary-600: #0077cc;
+  --primary-700: #005999;
+  --primary-800: #003c66;
+  --primary-900: #001e33;
+  
+  --secondary-500: #ff6b00;
+  --secondary-600: #cc5500;
+  
+  --success-500: #10b981;
+  --warning-500: #f59e0b;
+  --error-500: #ef4444;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom classes */
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary-500)] hover:bg-[var(--primary-600)] text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-[var(--primary-500)] text-[var(--primary-500)] font-medium py-2 px-4 rounded-lg hover:bg-[var(--primary-50)] transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-500)] focus:border-transparent;
+  }
+  
+  .section-title {
+    @apply text-2xl font-bold text-gray-900 mb-4;
+  }
+  
+  .free-delivery-badge {
+    @apply bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+}
